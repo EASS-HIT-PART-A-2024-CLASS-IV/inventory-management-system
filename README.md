@@ -58,3 +58,8 @@ The backend is a fastAPI app, with CRUD functionality for several API's, it hand
   5. To stop the application and remove the containers, run the command:
       
      `docker-compose down`
+
+## Short demo:
+https://github.com/EASS-HIT-PART-A-2024-CLASS-IV/inventory-management-system/assets/39120397/f3dcaa9e-b258-45d8-9c30-49ca085addca
+
+
