@@ -1,0 +1,62 @@
+
+/* Main container styling */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Navigation Bar styling */
+nav {
+  background: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--secondary-color);
+    }
+
+    &.active {
+      border-bottom: 2px solid var(--secondary-color);
+    }
+  }
+}
+
+/* Loading Indicator */
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+/* Error Message Styling */
+.error {
+  color: var(--error-color);
+  background: #FFD1D1;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  nav a {
+    margin: 0 10px;
+  }
+}

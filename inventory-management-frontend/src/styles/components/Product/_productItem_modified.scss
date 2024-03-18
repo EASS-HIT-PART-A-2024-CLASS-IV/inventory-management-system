@@ -1,0 +1,61 @@
+@import '../../variables';
+
+// :root {
+//   --primary-color: #5D1049;  /* Deep purple for primary actions */
+//   --secondary-color: #F3D250; /* Soft yellow for accents */
+//   --background-color: #F9F9F9; /* Light grey for backgrounds */
+//   --text-color: #333; /* Dark grey for text */
+//   --error-color: #FF6B6B; /* Red for errors and warnings */
+//   --success-color: #48C774; /* Green for success messages */
+// }
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #f8f8f8;
+  }
+
+  .product-details {
+    h3 {
+      margin: 0;
+      color: $primary-color;
+      font-size: 18px;
+    }
+
+    p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .alert {
+      color: $error-color;
+      font-weight: bold;
+    }
+  }
+
+  .product-actions {
+    button {
+      margin-left: 10px;
+      background-color: $secondary-color;
+      &:first-child {
+        background-color: $primary-color;
+      }
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .product-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

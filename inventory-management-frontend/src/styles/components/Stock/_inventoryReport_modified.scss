@@ -1,0 +1,49 @@
+@import '../../variables';
+
+// :root {
+//   --primary-color: #5D1049;  /* Deep purple for primary actions */
+//   --secondary-color: #F3D250; /* Soft yellow for accents */
+//   --background-color: #F9F9F9; /* Light grey for backgrounds */
+//   --text-color: #333; /* Dark grey for text */
+//   --error-color: #FF6B6B; /* Red for errors and warnings */
+//   --success-color: #48C774; /* Green for success messages */
+// }
+
+.inventory-report-container {
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  max-width: 800px;
+
+  h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+      text-align: left;
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background-color: #f8f8f8;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .inventory-report-container {
+    padding: 10px;
+  }
+}

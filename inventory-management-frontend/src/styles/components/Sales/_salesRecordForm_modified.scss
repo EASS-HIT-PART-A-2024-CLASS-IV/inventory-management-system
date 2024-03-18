@@ -1,0 +1,69 @@
+@import '../../variables';
+
+// :root {
+//   --primary-color: #5D1049;  /* Deep purple for primary actions */
+//   --secondary-color: #F3D250; /* Soft yellow for accents */
+//   --background-color: #F9F9F9; /* Light grey for backgrounds */
+//   --text-color: #333; /* Dark grey for text */
+//   --error-color: #FF6B6B; /* Red for errors and warnings */
+//   --success-color: #48C774; /* Green for success messages */
+// }
+
+.sales-record-form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  .sales-record-form-header {
+    color: $primary-color;
+    margin-bottom: 30px;
+  }
+
+  .sales-record-form-group {
+    margin-bottom: 20px;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    select, input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .error {
+      color: $error-color;
+      margin-top: -15px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+  }
+
+  .sales-record-form-button {
+    width: 100%;
+    padding: 10px 0;
+    background-color: $secondary-color;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sales-record-form-container {
+    padding: 10px;
+  }
+}

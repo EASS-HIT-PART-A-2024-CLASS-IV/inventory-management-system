@@ -1,0 +1,41 @@
+// Responsive Grid System
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .grid-item {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  // Media Queries for Responsive Adjustments
+  @media only screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .nav-menu.active {
+      display: block;
+    }
+  
+    .grid-container {
+      grid-template-columns: 1fr; // Stacks grid items vertically on smaller screens
+    }
+  }
+  
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr); // Adjusts to two columns for tablets and smaller desktops
+    }
+  }
+  
+  @media only screen and (min-width: 1025px) {
+    .grid-container {
+      grid-template-columns: repeat(3, 1fr); // Uses three columns for larger screens
+    }
+  }  

@@ -1,0 +1,21 @@
+// main.scss
+@import 'variables';
+@import 'base';
+//@import 'components/Product/ProductList';
+//@import 'components/Product/ProductForm';
+//@import 'components/Product/ProductItem';
+@import 'components/Stock/StockDashboard';
+//@import 'components/Stock/StockHistory';
+//@import 'components/Stock/InventoryReport';
+//@import 'components/Sales/SalesRecordForm';
+//@import 'components/Sales/SalesReport';
+//@import 'components/Sales/SalesList';
+@import 'auth';
+@import 'responsive';
+@import 'reports';
+@import 'feedback';
+@import 'componenets/navbar';
+
+@import 'components/Product/_productForm';
+@import 'components/Product/_productItem';
+@import 'components/Product/_productList';

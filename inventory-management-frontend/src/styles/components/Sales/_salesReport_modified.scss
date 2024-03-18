@@ -1,0 +1,73 @@
+@import '../../variables';
+
+// :root {
+//   --primary-color: #5D1049;  /* Deep purple for primary actions */
+//   --secondary-color: #F3D250; /* Soft yellow for accents */
+//   --background-color: #F9F9F9; /* Light grey for backgrounds */
+//   --text-color: #333; /* Dark grey for text */
+//   --error-color: #FF6B6B; /* Red for errors and warnings */
+//   --success-color: #48C774; /* Green for success messages */
+// }
+
+.sales-report-container {
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  max-width: 800px;
+
+  .sales-report-header {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+  }
+
+  .sales-report-filters {
+    margin-bottom: 20px;
+
+    label {
+      margin-right: 10px;
+    }
+
+    input[type="date"] {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 5px 10px;
+      margin-left: 5px;
+    }
+  }
+
+  .sales-report-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+      text-align: left;
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background-color: #f8f8f8;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sales-report-container {
+    padding: 10px;
+  }
+
+  .sales-report-filters {
+    flex-direction: column;
+
+    input[type="date"], button {
+      margin-bottom: 10px;
+    }
+  }
+}

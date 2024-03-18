@@ -1,0 +1,58 @@
+// Login Form Styles
+.login-form {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    background-color: #f8f9fa;
+  }
+  
+  .login-form input[type="email"],
+  .login-form input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+  }
+  
+  .login-form button[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+  
+  // User Role Styles
+  .user-role {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    color: #fff;
+  
+    &.admin { background-color: #dc3545; }
+    &.manager { background-color: #28a745; }
+    &.staff { background-color: #007bff; }
+  }
+  
+  // Permissions UI Elements
+  .permission-checkbox {
+    margin-right: 1rem;
+  
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+  
+    label {
+      font-size: 0.9rem;
+    }
+  }  
