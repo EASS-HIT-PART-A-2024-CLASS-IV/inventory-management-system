@@ -1,0 +1,58 @@
+version: '3.8'
+services:
+  backend:
+    container_name: fastapi-app
+    
+    build:
+      context: ./inventory-management-backend
+    
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
+    
+    volumes:
+      - ./inventory-management-backend:/app
+    
+    ports:
+      - "8000:8000"
+    
+    environment:
+      - DATABASE_URL=mongodb://db:27017/inventory-mng-local
+      - SECRET_KEY=verysecretkey
+      - ALGORITHM=HS256
+      - ACCESS_TOKEN_EXPIRE_MINUTES=30
+    
+    depends_on:
+      - db
+    
+    networks:
+      - app-network
+
+  db:
+    container_name: mongodb
+    image: mongo
+    volumes:
+      - mongodb_data:/data/db
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=inventory-mng-local # MongoDB will create this database on first run
+    
+    networks:
+      - app-network
+
+  frontend:
+    container_name: react-app
+    build:
+      context: ./inventory-management-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://backend:8000/api/v1
+    depends_on:
+      - backend
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mongodb_data:
